@@ -33,13 +33,13 @@ Then('Verify Business Account deposit or monthly fees table values', (datatable)
 })
 
 And('I click on {string} button', (label) => {
-  // This is flaky step - Somehow I need to click twice for booking pop-up to open
-  cy.wait(600)
+  // This step is flaky - Somehow I need to click twice for booking pop-up to open
+  cy.wait(700)
   allServicePage.getAllArrowbuttons().contains(label).click({ force: true })
   cy.wait(700)
   allServicePage.getAllArrowbuttons().contains(label).click({ force: true })
   // I am too lazy to enhance wait here
-  cy.wait(7000)
+  cy.wait(8000)
 })
 
 And('select a date {string} days from now', (numberOfDays) => {
